@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # API V1 routes
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      resources :calendars, only: %i[index create destroy]
+      resources :perfomances, only: %i[create destroy]
+      end
+    end
+  end
 end
