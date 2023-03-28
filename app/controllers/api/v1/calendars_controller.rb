@@ -15,7 +15,6 @@ module Api
         else
           render json: { error: calendar.errors.full_messages }, status: :unprocessable_entity
         end
-
       end
 
       def destroy
