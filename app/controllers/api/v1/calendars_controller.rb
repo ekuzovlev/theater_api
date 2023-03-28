@@ -19,7 +19,10 @@ module Api
       end
 
       def destroy
+        calendar = Calendar.find(params[:id])
+        calendar.destroy
 
+        render json: {}, status: :no_content
       end
 
       private
