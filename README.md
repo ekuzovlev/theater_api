@@ -1,24 +1,27 @@
-# README
+# Театральная афиша
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Это приложение реализует API для расписания спектаклей.
 
-Things you may want to cover:
+Получить список всех спектаклей (GET)
 
-* Ruby version
+```
+/api/v1/calendars/
+```
 
-* System dependencies
+Добавить спектакль в расписание (POST)
 
-* Configuration
+```
+/api/v1/calendars/?start_date=2022-02-12&end_date=2022-02-14&perfomance_id=8"
+```
 
-* Database creation
+Удалить спектакль из расписания (DELETE)
 
-* Database initialization
+```
+/api/v1/calendars/{id}
+```
 
-* How to run the test suite
+По адресу `/api/v1/perfomances` для доступно создание и удаление самих спектаклей, с обязательным параметром `title`, например:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+/api/v1/perfomances?title=Дядя Ваня
+```
